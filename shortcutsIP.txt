@@ -1,0 +1,65 @@
+BASH
+
+C-a – go to the start of the command line
+C-e – go to the end of the command line
+C-k – delete from cursor to the end of the command line
+C-u – delete from cursor to the start of the command line
+C-w – delete from cursor to start of word (i.e. delete backwards one word)
+A-d – delete to end of word starting at cursor (whole word if cursor is at the beginning of word)
+C-y – paste word or text that was cut using one of the deletion shortcuts (such as the one above) after the cursor
+
+C-r – search the history backwards
+C-s – stops the output to the screen (for long running verbose command)
+C-q – allow output to the screen (if previously stopped using command above)
+C-c – terminate the command
+C-z – suspend/stop the command
+
+
+
+VIM
+:sp - split horizontally
+:wq - save and exit
+ZZ - save and exit
+,cc - comment out
+,ci - toggle comments
+
+C-t, C-d - indent current line forward, backwards (insert mode)
+> or < - indent block (Visual mode)
+
+TMUX
+
+A-a + c - create new window
+A-a + w - list windows
+A-a + s - list sessions
+A-a + | - split horizontally
+A-a + - - split vertically
+A-a + arrow - move to different pane
+
+A-a + } - swap with next pane
+A-a + [ - scroll mode, q to exit
+C-Space - start selection
+A-w or C-w - copy selection to buffer
+A-a + ] - to paste from buffer
+
+MC
+
+A-s - quick search by first letetrs
+A-h - show command history
+A-S-h - show folder history
+
+
+ROS
+
+rqt & - shows all available rqt tools
+rosrun rqt_graph rqt_graph - graph of nodes and topics
+rosrun rqt_plot rqt_plot - plot topics
+rosrun rqt_console rqt_console - displays logging output from nodes
+rosrun rqt_logger_level rqt_logger_level - change verbosity of logging
+rosrun rqt_tf_tree rqt_tf_tree
+
+rosrun rviz rviz - launch rviz
+rospack - provides information related to ROS packages
+
+rosrun tf tf_monitor <frame1> <frame2> - monitor published tfs
+
+rosrun sawyer_ipen send_urdf_ipen.py -f "$(rospack find sawyer_ipen)/scripts/sawyer_table.urdf" -l base -j pedestal_tfixed
