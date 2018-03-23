@@ -26,6 +26,11 @@ ZZ - save and exit
 C-t, C-d - indent current line forward, backwards (insert mode)
 > or < - indent block (Visual mode)
 
+"+y - copy the selection into clipboard buffer
+gg"+yG – copy the entire buffer into + (normal mode)
+"*dd – cut the current line into * (normal mode)
+"+p – paste from + after the cursor (works in both normal and visual modes)
+
 TMUX
 
 A-a + c - create new window
