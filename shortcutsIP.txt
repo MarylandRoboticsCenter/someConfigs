@@ -13,13 +13,12 @@ C-s – stops the output to the screen (for long running verbose command)
 C-q – allow output to the screen (if previously stopped using command above)
 C-c – terminate the command
 C-z – suspend/stop the command
-
-
+fg - bring suspended command back to the foreground
 
 VIM
 :sp - split horizontally
-:wq - save and exit
-ZZ - save and exit
+:wq (or ZZ) - save and exit
+
 ,cc - comment out
 ,ci - toggle comments
 
@@ -30,6 +29,31 @@ C-t, C-d - indent current line forward, backwards (insert mode)
 gg"+yG – copy the entire buffer into + (normal mode)
 "*dd – cut the current line into * (normal mode)
 "+p – paste from + after the cursor (works in both normal and visual modes)
+
+C-w + +(or -) - resize the height of the current window by a single row (horiz split)
+C-w + <(or >) - resize the width of the current window by a single column (vert split)
+C-w + = - resize all windows to equal dimensions based on their splits
+
+a - Append text following current cursor position
+A - Append text to the end of current line
+i - Insert text before the current cursor position
+I - Insert text at the beginning of the cursor line
+J - Join next line down to the end of the current line
+r - Replace one character at the cursor position
+
+u - undo
+C-R - redo
+
+w - move cursor forward one word
+b - move cursor backward one word
+
+gg - move cursor to the beginning of file (1st row, 1st column)
+G - move cursor to the last line
+$ - Move cursor to the end of current line
+0 (zero) - Move cursor to the beginning of current line
+
+:noh - turn off highlighting until the next search
+:reg - show all defined registers
 
 TMUX
 
