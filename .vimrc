@@ -78,6 +78,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+nnoremap <C-w>e :SyntasticToggleMode<CR>
+autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
 
 let g:netrw_preview   = 1
 let g:netrw_liststyle = 3
@@ -166,6 +168,9 @@ endif
 " set autoread
 "autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+nnoremap o o<Esc>
+nnoremap O O<Esc>
 
 set formatoptions=n1
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
