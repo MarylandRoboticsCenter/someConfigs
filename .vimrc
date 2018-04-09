@@ -14,6 +14,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'mhinz/vim-startify'
+Plugin 'lpenz/vimcommander'
 
 " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
@@ -64,7 +66,9 @@ set mouse=a
 " Turn off modelines
 set modelines=0
 " Display 5 lines above/below the cursor when scrolling with a mouse.
-set scrolloff=5
+set scrolloff=8
+" Allow the cursor to go in to 'invalid' places
+"set virtualedit=all
 " Status bar
 set laststatus=2
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
@@ -105,7 +109,9 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-let mapleader=","
+
+let g:startify_bookmarks = ['~/.vimrc',]
+let g:startify_custom_header = [' ']
 
 " Set colors to use 256 color palette
 "set t_Co=256
@@ -113,6 +119,8 @@ let mapleader=","
 "highlight Normal ctermbg=236
 "highlight SpecialKey guifg=DarkRed ctermfg=DarkRed guibg=Black ctermbg=Black
 " Display different types of white spaces.
+let mapleader=","
+
 set list
 set listchars=tab:»-,trail:·,extends:#,nbsp:.
 "eol:⏎
@@ -137,7 +145,7 @@ set hlsearch
 set incsearch
 
 " Use the system clipboard as the default copy register
-set clipboard=unnamed
+set clipboard=unnamedplus
 " Copy indentation level when creating a new line
 set autoindent
 " Try to put the indent level at the right place
@@ -153,14 +161,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" Vim Plug automatic installation
-" if empty(glob('~/.vim/autoload/plug.vim'))
-"     silent !curl -fsLo ~/.vim/autoload/plug.vim \
-"         --create-dirs https://raw.githubusercontent.com\
-"         /junegunn/vim-plug/master/plug.vim
-"     autocmd VimEnter * PlugInstall | source $MYVIMRC
-" endif
-
 " Sets how many lines of history VIM has to remember
 " set history=500
 
@@ -171,6 +171,15 @@ map <C-n> :NERDTreeToggle<CR>
 
 nnoremap o o<Esc>
 nnoremap O O<Esc>
+
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+
+vnoremap <C-c> "+y
 
 set formatoptions=n1
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

@@ -1,4 +1,4 @@
-BASH
+===============BASH===============
 
 C-a – go to the start of the command line
 C-e – go to the end of the command line
@@ -15,7 +15,8 @@ C-c – terminate the command
 C-z – suspend/stop the command
 fg - bring suspended command back to the foreground
 
-VIM
+===============VIM===============
+
 :sp - split horizontally
 :wq (or ZZ) - save and exit
 
@@ -55,7 +56,16 @@ $ - Move cursor to the end of current line
 :noh - turn off highlighting until the next search
 :reg - show all defined registers
 
-TMUX
+:windo diffthis - re-scan the files for differences
+:diffupdate - to remove leftover spacing issues
+]c - next difference
+[c - previous difference
+dp - diff put
+do - diff obtain
+
+:set syntax=sh - change syntax highlighting to bash
+
+===============TMUX===============
 
 A-a + c - create new window
 A-a + w - list windows
@@ -70,14 +80,14 @@ C-Space - start selection
 A-w or C-w - copy selection to buffer
 A-a + ] - to paste from buffer
 
-MC
+===============MC===============
 
 A-s - quick search by first letetrs
 A-h - show command history
 A-S-h - show folder history
 
 
-ROS
+===============ROS===============
 
 rqt & - shows all available rqt tools
 rosrun rqt_graph rqt_graph - graph of nodes and topics
