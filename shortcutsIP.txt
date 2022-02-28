@@ -15,6 +15,11 @@ C-c – terminate the command
 C-z – suspend/stop the command
 fg - bring suspended command back to the foreground
 
+"cd -" - move to the previous directory
+!! (e.g. sudo !!) - repeat the last command
+"while ! [command]; do sleep 1; done" - keep executing a command until it succeeds
+pv (e.g. "pv access.log | gzip > access.log.gz") - view progress of file transfers (pv command)
+column -t (e.g. "cat /etc/passwd | column -t") - display at output as a table
 ===============VIM===============
 
 :sp - split horizontally
